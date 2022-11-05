@@ -1,35 +1,34 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import './App.css';
-
-import HomePage from './Pages/HomePage';
+import './App.scss';
+import Layout from './Components/Layout/Layout';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route
-        path="/"
-        element={<HomePage />}
+          path="/"
+          element={<Layout />}
+        />
+        {/* <Route
+          path="/#about"
+          element={<HomePage />}
         />
         <Route
-        path="/#about"
-        element={<HomePage />}
+          path="/#skills"
+          element={<HomePage />}
         />
         <Route
-        path="/#skills"
-        element={<HomePage />}
+          path="/#projects"
+          element={<HomePage />}
         />
         <Route
-        path="/#projects"
-        element={<HomePage />}
-        />
-        <Route
-        path="/#contact"
-        element={<HomePage />}
-        />
+          path="/#contact"
+          element={<HomePage />}
+        /> */}
       </Routes>
-    </div>
+    </>
   );
 }
 
