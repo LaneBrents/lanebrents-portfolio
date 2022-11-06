@@ -1,17 +1,46 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import './Header.scss';
-import NavBar from "../NavBar/NavBar";
+import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
 
-export default function Header() {
+const Header = () => {
+    const [letterClass, setLetterClass] = useState('text-animate')
+    const nameArray = ['','L', 'a', 'n', 'e']
+    const jobArray = ['F', 'u', 'l', 'l', '-', 'S', 't', 'a', 'c', 'k','', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+
+    useEffect(() => {
+        return setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+    }, [])
+
     return (
-        <header>
-            <NavBar />
-            <div className="flex-full about-text">
-                <h1 className="white">Hello! <br /> I'm Lane!</h1>
-                <h3 className="white">A Frontend focused Web Developer that loves creating beautiful and interactive Web Applications</h3>
-                <a className="red" href="mailto:lanebrents@gmail.com">Let's chat!</a>
+        <>
+            <div className="container header-page">
+                <div className="text-zone">
+                    <h1>
+                        <span className={letterClass}>H</span>
+                        <span className={`${letterClass} _12`}>i,</span>
+                        <br />
+                        <span className={`${letterClass} _13`}>I</span>
+                        <span className={`${letterClass} _14`}>'m</span>
+                        <AnimatedLetters letterClass={letterClass}
+                            strArray={nameArray}
+                            idx={15} />
+                        <br />
+                        <AnimatedLetters
+                            letterClass={letterClass}
+                            strArray={jobArray}
+                            idx={16}
+                        />
+                    </h1>
+                    <h2>Frontend Focus / Freelancer</h2>
+                    <Link to="/contact" className="flat-button">Contact Me</Link>
+                </div>
             </div>
-            {/* <Image src="/images/lane.png" width={463} height={513} alt="lane" /> */}
-        </header>
+        </>
     )
 }
+
+export default Header
