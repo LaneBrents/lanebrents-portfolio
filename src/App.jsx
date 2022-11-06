@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import './App.scss';
 import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
 import Layout from './Components/Layout/Layout';
 
 function App() {
@@ -13,8 +14,12 @@ function App() {
           element={<Layout />}
         />
         <Route
-          path="/#about"
+          path="/about"
           element={<About />}
+        />
+        <Route
+          path="/contact"
+          element={<Contact />}
         />
       </Routes>
     </>

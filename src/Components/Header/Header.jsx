@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './Header.scss';
 import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
+import { Loader } from "semantic-ui-react";
 
 const Header = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -39,6 +40,8 @@ const Header = () => {
                     <Link to="/contact" className="flat-button">Contact Me</Link>
                 </div>
             </div>
+
+            <Loader type="pacman" />
         </>
     )
 }

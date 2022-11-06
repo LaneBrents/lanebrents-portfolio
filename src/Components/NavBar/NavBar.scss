@@ -138,13 +138,14 @@ ul {
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .nav-bar { 
-      background: transparent;
+      background: #181818;
+      width: 100%;
       position: initial;
       height: auto;
       min-height: auto;
-  
+        
        ul, nav {
         display: none;
        }
@@ -180,6 +181,8 @@ ul {
           opacity: 1 !important;
         }
        }
+
+       
 
        .hamburger-icon,
        .close-icon {
