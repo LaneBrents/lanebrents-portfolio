@@ -9,7 +9,7 @@
     will-change: contents;
     height: 90%;
     min-height: 566px;
-    position: absolute;
+    position: relative;
     opacity: 0;
     top: 5%;
     margin: 0 auto;
@@ -19,7 +19,6 @@
     animation-delay: 1s;
 }
 
-.container.contact-page,
 .container.about-page,
 .container.portfolio-page {
   
@@ -28,7 +27,7 @@
       font-family: 'Coolvetica';
       color: #ffd700;
       font-weight: 400;
-      margin-top: 0;
+      margin-top: 10%;
       position: relative;
       margin-bottom: 40px;
       left: -10px;
@@ -70,6 +69,19 @@
   }
 }
 
+.container.contact-page {
+  h1 {
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: #ffd700;
+    font-weight: 400;
+    margin-top: 30%;
+    position: relative;
+    margin-bottom: 40px;
+    left: 10%;
+  }
+}
+
 @media screen and (max-width: 768px) {
     .page {
       position: initial;
@@ -80,7 +92,6 @@
       height: auto;
       min-height: auto;
   
-      &.contact-page,
       &.about-page,
       &.portfolio-page {
         .text-zone {
@@ -91,6 +102,10 @@
           padding: 20px;
           box-sizing: border-box;
         }
+      }
+
+      &.contact-page {
+        margin-top: 50%;
       }
   
       &.portfolio-page {

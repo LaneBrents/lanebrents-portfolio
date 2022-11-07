@@ -4,6 +4,7 @@ import Loader from 'react-loaders'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
+import NavBar from '../NavBar/NavBar';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -33,6 +34,7 @@ const Contact = () => {
 
   return (
     <>
+    {/* <NavBar /> */}
       <div className="container contact-page">
         <div className="text-zone">
           <h1>
@@ -82,16 +84,6 @@ const Contact = () => {
               </ul>
             </form>
           </div>
-        </div>
-        <div className="info-map">
-          Slobodan Gajić,
-          <br />
-          Serbia,
-          <br />
-          Branka RadiČevića 19, 22000 <br />
-          Sremska Mitrovica <br />
-          <br />
-          <span>freelancerslobodan@gmail.com</span>
         </div>
       </div>
       <Loader type="pacman" />

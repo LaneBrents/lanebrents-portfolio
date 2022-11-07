@@ -11,6 +11,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './About.scss'
+import NavBar from '../NavBar/NavBar'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -23,6 +24,7 @@ const About = () => {
 
   return (
     <>
+    {/* <NavBar /> */}
       <div className="container about-page">
         <div className="text-zone">
           <h1>
@@ -48,7 +50,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="stage-cube-cont">
+        {/* <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
               <FontAwesomeIcon icon={faAngular} color="#DD0031" />
@@ -69,7 +71,7 @@ const About = () => {
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <Loader type="pacman" />
     </>
