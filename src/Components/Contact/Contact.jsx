@@ -58,7 +58,7 @@ const Contact = () => {
                                 <textarea placeholder='Message' name='message' required />
                             </li>
                             <li>
-                                <input type="button" className="flat-button" value="SEND" onClick={sendEmail} />
+                                <input type="submit" className="flat-button" value="SEND" />
                             </li>
                         </ul>
                     </form>
