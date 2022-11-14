@@ -31,20 +31,13 @@ const NavBar = () => {
                     onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faUser} color="white" />
                 </NavLink>
-                <NavLink
-                    activeclassname="active"
-                    className="skills-link"
-                    to="/Skills"
-                    onClick={() => setShowNav(false)}>
-                    <FontAwesomeIcon icon={faGear} color="white" />
-                </NavLink>
-                <NavLink
+                {/* <NavLink
                     activeclassname="active"
                     className="projects-link"
                     to="/Projects"
                     onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faProjectDiagram} color="white" />
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                     activeclassname="active"
                     className="contact-link"

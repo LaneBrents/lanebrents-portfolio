@@ -1,19 +1,23 @@
-import NavBar from '../NavBar/NavBar';
 import { Outlet } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
 import './Layout.scss';
-import Header from '../Header/Header';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
 
 const Layout = () => {
     return (
-        <>
-            <NavBar />
-            <Header />
-            <About />
-            <Contact />
-        </>
-    )
-}
+        <div className="App">
+          <NavBar />
+          <div className="page">
+            <span className="tags top-tags">&lt;body&gt;</span>
+    
+            <Outlet />
+            <span className="tags bottom-tags">
+              &lt;/body&gt;
+              <br />
+              <span className="bottom-tag-html">&lt;/html&gt;</span>
+            </span>
+          </div>
+        </div>
+      )
+    }
 
 export default Layout

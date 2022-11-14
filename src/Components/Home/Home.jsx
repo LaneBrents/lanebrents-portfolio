@@ -1,12 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './Header.scss';
+import './Home.scss';
 import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
-import { Loader } from "semantic-ui-react";
+import Loader from "react-loaders";
 
-const Header = () => {
+const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+
     const nameArray = ['','L', 'a', 'n', 'e']
     const jobArray = ['F', 'u', 'l', 'l', '-', 'S', 't', 'a', 'c', 'k','', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
 
@@ -41,9 +42,9 @@ const Header = () => {
                 </div>
             </div>
 
-            <Loader type="pacman" />
+            <Loader type="ball-pulse" />
         </>
     )
 }
 
-export default Header
+export default Home
